@@ -119,3 +119,14 @@ tapply(USDA$VitaminC, USDA$HighCarbs, max, na.rm=TRUE)  # Groups by HighCarbs, t
 # Results in
 # 0      1 
 # 1677.6 2400.0
+
+tapply(USDA$VitaminC, USDA$HighCarbs, summary, na.rm=TRUE)  # Groups by HighCarbs, then applies
+                                                            # summary to VitaminC for each group
+# Results in
+# $`0`
+# Min.  1st Qu.   Median     Mean  3rd Qu.     Max.     NA's 
+#    0.000    0.000    0.000    6.364    2.800 1677.600      248 
+# 
+# $`1`
+#    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+# 0.00    0.00    0.20   16.31    4.50 2400.00      83 
