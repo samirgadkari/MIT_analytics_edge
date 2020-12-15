@@ -144,3 +144,5 @@ sort(tapply(CPS$Country == 'Brazil', CPS$MetroArea, sum, na.rm=TRUE),
 # with a country of birth in Somalia
 sort(tapply(CPS$Country == 'Somalia', CPS$MetroArea, sum, na.rm=TRUE),
      decreasing=TRUE)[1]
+
+rm(CountryMap, CPS, MetroAreaMap, citizens, citizenship, var.name)
