@@ -71,3 +71,5 @@ tapply(IBM$StockPrice,    # Step 3. Apply mean to the stock price
 mean(IBM$StockPrice)
 tapply(CocaCola$StockPrice, months(CocaCola$Date), mean)
 tapply(GE$StockPrice, months(GE$Date), mean)
+
+rm(Boeing, CocaCola, GE, IBM, ProcterGamble)
