@@ -68,3 +68,37 @@ table(limited$Tried.Masking.Identity)
 # What proportion of interviewees who answered the Privacy.Laws.Effective 
 # question find United States privacy laws effective
 table(limited$Privacy.Laws.Effective)
+
+# Histogram of age of interviewees.
+# What is the most represented age group?
+hist(limited$Age)
+
+# What is the largest number of interviewees that have exactly the same value 
+# in their Age variable AND the same value in their Info.On.Internet variable? i. e.
+# What is the largest number of overlapping points?
+plot(limited$Age, limited$Info.On.Internet)
+# Since there are many points that can be plotted in the same location on this graph,
+# we won't be able to look at it and answer the question. Instead, build a table
+table(limited$Age, limited$Info.On.Internet)
+# Then read off the highest value in the table
+
+# The jitter() function can jitter points on a graph, so that all points are seen.
+# With the jittered points on the graph how are Age and Info.on.Internet related.
+plot(jitter(limited$Age), jitter(limited$Info.On.Internet))
+# Looking at the graph, it seems there is a moderate negative relationship between age and
+# Info.on.Internet
+
+# Use tapply() to obtain the summary of Info.on.Internet, broken down by
+# the Smartphone feature.
+tapply(limited$Info.On.Internet, limited$Smartphone, summary)
+# Result shows that the mean of Smartphone users for Info.on.Internet is larger
+# than the mean for non-Smartphone users.
+
+# Use tapply() to obtain the summary of the Tried.Masking.Identity,
+# broken down by the Smartphone feature.
+tapply(limited$Tried.Masking.Identity, limited$Smartphone, summary)
+# The result shows that the mean of the Smartphone users for Tried.Masking.Identity
+# is larger than the mean for non-Smartphone users.
+
+# Removed created dataframes from the environment to decrease memory usage.
+remove(limited, poll)
