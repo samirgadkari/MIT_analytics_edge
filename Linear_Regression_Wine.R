@@ -110,3 +110,8 @@ SST = sum((wineTest$Price - mean(wine$Price))^2)
 # Training set R^2 can never be negative.
 # Test set R^2 can cannot be > 1.0 since both SSE and SST are > 0 and 
 # R^2 = 1 - (SSE / SST)
+
+# Remove all dataframes and values
+rm(model1, model2, model3, model4, model5, quickQuestionModel1,
+   testmodel1, wine, wineTest, predictTest, SSE, SST)
+
