@@ -104,3 +104,9 @@ SST = sum((wineTest$Price - mean(wine$Price))^2)
 # [1] 0.7944278
 # This is a good R^2 value. But, there were only 2 points. We should use a
 # test set with more points.
+# We should compare the Model R^2 on the training set, and the test set R^2
+# values. We want both those values to be high.
+# Test set R^2 can be negative if the model does worse on the test set.
+# Training set R^2 can never be negative.
+# Test set R^2 can cannot be > 1.0 since both SSE and SST are > 0 and 
+# R^2 = 1 - (SSE / SST)
