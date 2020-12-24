@@ -114,3 +114,15 @@ with(testDF, text(RS~Salary, labels=testDF$Name, pos=1))
 #   Carlos Pena and Jeremy Giambi. Their salary put together comes to
 #   $ 1,365,000, which is less than the 1,500,000 budget.
 
+# But why was the focus on getting into the playoffs. It so happens that
+# with the large number of games, luck is not as important as skill.
+# Over all the games, skill shines through.
+# In the playoffs, a series of 3 out of 5 or even 4 out of 7,
+# anything can happen.
+# Let's see if that is true.
+# Let's use years 1994 - 2011. This is needed because the number of teams
+# has changed over time, but from 1994 - 2011, there were a fixed 8 teams.
+# Correlation between winning the world series and regular season wins is 0.03.
+# In the playoffs, there are too few games for luck to even out.
+
+rm(baseball, moneyball, RunsAllowedReg, RunsReg, testDF, WinsReg)
