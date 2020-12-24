@@ -96,3 +96,6 @@ R2
 RMSE = sqrt(SSE/nrow(NBA_test))
 RMSE
 # RMSE = 195.7653 which is a little higher than before, but still reasonable.
+
+rm(NBA, NBA_test, PointsReg, PointsReg2, PointsReg3, PointsReg4, WinsReg,
+   PointsPredictions, R2, RMSE, RMSE_4, SSE, SSE_4, SST)
