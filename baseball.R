@@ -124,3 +124,5 @@ with(testDF, text(RS~Salary, labels=testDF$Name, pos=1))
 # has changed over time, but from 1994 - 2011, there were a fixed 8 teams.
 # Correlation between winning the world series and regular season wins is 0.03.
 # In the playoffs, there are too few games for luck to even out.
+
+rm(baseball, moneyball, RunsAllowedReg, RunsReg, testDF, WinsReg)
